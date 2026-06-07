@@ -1,0 +1,57 @@
+{
+  "config": "gated_optimum",
+  "swept": "beta",
+  "embedder": "bge-m3 (cached)",
+  "calib_file": "part4_dynamic_path\\data\\manifests\\calibration_queries_en.yaml",
+  "n_test": 64,
+  "sweep": [
+    {
+      "beta": 1.0,
+      "recall_floor": 0.8,
+      "f1": 0.497,
+      "precision": 0.437,
+      "recall": 0.803,
+      "mean_k": 3.12,
+      "mean_latency_s": 10.76,
+      "latency_vs_normal_pct": 9.3,
+      "abstain_accuracy": 0.4,
+      "max_tau": 0.306
+    },
+    {
+      "beta": 2.0,
+      "recall_floor": 0.8,
+      "f1": 0.493,
+      "precision": 0.433,
+      "recall": 0.803,
+      "mean_k": 3.17,
+      "mean_latency_s": 10.76,
+      "latency_vs_normal_pct": 9.3,
+      "abstain_accuracy": 0.4,
+      "max_tau": 0.284
+    },
+    {
+      "beta": 3.0,
+      "recall_floor": 0.8,
+      "f1": 0.503,
+      "precision": 0.433,
+      "recall": 0.864,
+      "mean_k": 3.61,
+      "mean_latency_s": 10.76,
+      "latency_vs_normal_pct": 9.3,
+      "abstain_accuracy": 0.4,
+      "max_tau": 0.166
+    },
+    {
+      "beta": 5.0,
+      "recall_floor": 0.8,
+      "f1": 0.503,
+      "precision": 0.433,
+      "recall": 0.864,
+      "mean_k": 3.61,
+      "mean_latency_s": 10.76,
+      "latency_vs_normal_pct": 9.3,
+      "abstain_accuracy": 0.4,
+      "max_tau": 0.166
+    }
+  ]
+}

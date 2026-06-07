@@ -1,0 +1,640 @@
+queries:
+- id: GAP_C002
+  text: What are the criminal penalties for fraudulent tax declarations in Italy?
+  expected_agents: []
+  difficulty: simple
+  risk_level: low
+  category: out_of_domain
+  expected_outcome: abstain
+  abstain_reason: out_of_domain
+  source: gap_filler
+- id: GAP_C015
+  text: My mother died last year with a valid notarial will leaving everything to me; my brother now claims he is the sole
+    heir under a different valid notarial will from the same date, both deposited with the same notary, both authentic. What
+    is the procedural resolution?
+  expected_agents: []
+  difficulty: medium
+  risk_level: low
+  category: contradictory_facts
+  expected_outcome: abstain
+  abstain_reason: contradictory
+  source: gap_filler
+- id: GAP_C005
+  text: Can my employer terminate me without just cause during the probation period under the national labour contract?
+  expected_agents: []
+  difficulty: simple
+  risk_level: low
+  category: out_of_domain
+  expected_outcome: abstain
+  abstain_reason: out_of_domain
+  source: gap_filler
+- id: GAP_C004
+  text: What is the deadline to appeal an administrative tax assessment from the Agenzia delle Entrate?
+  expected_agents: []
+  difficulty: simple
+  risk_level: low
+  category: out_of_domain
+  expected_outcome: abstain
+  abstain_reason: out_of_domain
+  source: gap_filler
+- id: GAP_C012
+  text: Under German succession law (BGB §1922 ff.), what is the procedure for accepting an inheritance with limitation of
+    liability?
+  expected_agents: []
+  difficulty: medium
+  risk_level: low
+  category: out_of_jurisdiction
+  expected_outcome: abstain
+  abstain_reason: out_of_jurisdiction
+  source: gap_filler
+- id: GAP_C013
+  text: I have a problem with my inheritance. What should I do?
+  expected_agents: []
+  difficulty: simple
+  risk_level: low
+  category: insufficient_facts
+  expected_outcome: abstain
+  abstain_reason: insufficient_facts
+  source: gap_filler
+- id: ST008
+  text: Litigious separation, bitter property dispute; couple in community owned several investment properties; wife claims
+    husband concealed third property bought 2017 in sister's name (nominee); forensic accounting suggests husband funded it;
+    2 minor children. Recharacterization analysis + procedural path for asset recovery within separation?
+  expected_agents:
+  - A_separazione_contenziosa
+  - A_patrimoniale_comunione
+  - A_tutela_minori
+  - A_negoziazione_assistita_e_mediazione_familiare
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: hidden_asset_separation
+  source: stress
+- id: ST009
+  text: Couple consensual separation 2022, separation of property since marriage 2015; husband (sole title-holder family home)
+    dies 2024; agreement granted wife exclusive use of home until minor child turns 18; deceased's parents (intestate heirs)
+    seek possession; widow legally separated claims right of use survives. Analysis combining succession + separation agreement
+    enforcement?
+  expected_agents:
+  - A_succ_legittima
+  - A_separazione_consensuale
+  - A_tutela_minori
+  - A_patrimoniale_separazione
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: family_home_use_post_mortem
+  source: stress
+- id: GS050
+  text: Adoption of the spouse's child in a blended family under Italian law
+  expected_agents:
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: adozione_speciale
+  source: golden
+- id: ST013
+  text: Spouses tried mediation then assisted negotiation, both failed; proceed to litigious separation; husband in Italy,
+    wife and 2 minors moved to Switzerland during proceeding; wife seeks Swiss jurisdiction for maintenance, husband insists
+    Italian; wife also seeks recognition of Italian provisional maintenance in CH. Jurisdictional analysis and enforcement
+    path?
+  expected_agents:
+  - A_separazione_contenziosa
+  - A_negoziazione_assistita_e_mediazione_familiare
+  - A_tutela_minori
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: cross_border_jurisdiction_maintenance
+  source: stress
+- id: GS025
+  text: Can repeated mistreatment during the marriage ground the attribution of fault in a separation?
+  expected_agents:
+  - A_separazione_contenziosa
+  - A_tutela_minori
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: violenza_domestica
+  source: golden
+- id: ST007
+  text: Spouses consensually separated 2020, one minor child, maintenance €800/month; father 18 months in arrears, declares
+    personal bankruptcy; mother seeks to attach a future inheritance father expects (his mother terminally ill, intestate,
+    he is one of three siblings). Procedural mechanisms protecting minor's maintenance in light of impending succession?
+  expected_agents:
+  - A_separazione_consensuale
+  - A_tutela_minori
+  - A_succ_legittima
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: maintenance_arrears_inheritance
+  source: stress
+- id: GS044
+  text: 'Relocation abroad of the custodial parent with a minor: what is the procedure?'
+  expected_agents:
+  - A_tutela_minori
+  - A_separazione_contenziosa
+  - A_volontaria_giurisdizione
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: trasferimento_minore
+  source: golden
+- id: ST002
+  text: Widowed father dies intestate, 3 children incl. 1 minor under his exclusive parental responsibility (mother predeceased);
+    estate has closely-held family business operated under conjugal community with late wife; adult sibling managed business
+    during father's illness, seeks operating contribution recognition. Procedural sequence?
+  expected_agents:
+  - A_succ_legittima
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  - A_patrimoniale_comunione
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: intestate_minor_business
+  source: stress
+- id: ST014
+  text: Consensually-separated father dies; at separation (2017) property was community, liquidated in agreement; will (2020)
+    instituting new partner as universal heir; 3 minors from marriage with mother holding parental responsibility; 12 months
+    maintenance arrears at death; estate in IT and DE; new partner refuses legittima claim. Integrated roadmap covering succession,
+    legittima recovery, maintenance enforcement against estate, minor representation, cross-border administration?
+  expected_agents:
+  - A_succ_testamentaria
+  - A_succ_legittima
+  - A_tutela_minori
+  - A_separazione_consensuale
+  - A_patrimoniale_comunione
+  - A_volontaria_giurisdizione
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: maximum_complexity_succession
+  source: stress
+- id: ST012
+  text: Tribunal separation decree assigns family home to mother + 2 minors; father loses job, falls behind on maintenance,
+    stops paying mortgage on co-owned home; bank initiates foreclosure; mother seeks (1) anti-eviction protective orders,
+    (2) maintenance enforcement, (3) decree modification for changed circumstances. Multi-track strategy?
+  expected_agents:
+  - A_separazione_contenziosa
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  - A_patrimoniale_comunione
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: foreclosure_minor_maintenance_modification
+  source: stress
+- id: ST010
+  text: Unmarried parents of 2 children (8, 11); jointly purchased property under joint ownership; relationship ends; mother
+    seeks (1) judicial custody+maintenance determination, (2) partition or compensation, (3) authorization for international
+    travel with children to Croatia; father opposes all three. Procedural sequence and mechanisms?
+  expected_agents:
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  - A_separazione_contenziosa
+  - A_patrimoniale_comunione
+  - A_negoziazione_assistita_e_mediazione_familiare
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: unmarried_parents_dispute
+  source: stress
+- id: GAP_B004
+  text: 'A private-purpose foundation is instituted as universal heir under a will, with adult residuary legittimari who do
+    not contest the disposition: what fiduciary obligations bind the foundation toward them, and through which procedural
+    channel are they enforced?'
+  expected_agents:
+  - A_succ_testamentaria
+  - A_succ_legittima
+  difficulty: complex
+  risk_level: low
+  category: foundation_heir_fiduciary
+  expected_outcome: synthesise
+  source: gap_filler
+- id: GAP_B001
+  text: 'Two adult brothers inherit a commercial building under conventional community of property: how is the regime affected
+    when one demands judicial partition and the other proposes continued joint management with a profit-sharing agreement?'
+  expected_agents:
+  - A_succ_legittima
+  - A_patrimoniale_comunione
+  - A_negoziazione_assistita_e_mediazione_familiare
+  difficulty: complex
+  risk_level: low
+  category: adult_inheritance_partition_dispute
+  expected_outcome: synthesise
+  source: gap_filler
+- id: GAP_B006
+  text: 'Mid-marriage modification of conventional community into separation of property by adult spouses with no children:
+    notarial requirements, transparency obligations toward existing creditors, third-party publication effects.'
+  expected_agents:
+  - A_patrimoniale_comunione
+  - A_patrimoniale_separazione
+  - A_volontaria_giurisdizione
+  difficulty: complex
+  risk_level: low
+  category: regime_modification_no_children
+  expected_outcome: synthesise
+  source: gap_filler
+- id: GAP_B009
+  text: 'Reciprocal wills between two adult cohabiting siblings with no other heirs: validity limits, revocability requirements,
+    and effects when one sibling later marries.'
+  expected_agents:
+  - A_succ_testamentaria
+  - A_succ_legittima
+  difficulty: complex
+  risk_level: low
+  category: reciprocal_wills_siblings
+  expected_outcome: synthesise
+  source: gap_filler
+- id: ST020
+  text: Litigious separation pending; wife universal testamentary heir of uncle (died last month); husband seeks to include
+    inheritance in marital-assets calculation arguing it accrued during marriage; couple in community at testator's death;
+    1 minor child.
+  expected_agents:
+  - A_separazione_contenziosa
+  - A_succ_testamentaria
+  - A_patrimoniale_comunione
+  - A_tutela_minori
+  difficulty: complex
+  risk_level: medium
+  category: inheritance_during_separation
+  source: stress
+- id: GS058
+  text: 'Succession of a spouse under the legal community regime: does the community share automatically dissolve?'
+  expected_agents:
+  - A_patrimoniale_comunione
+  - A_succ_legittima
+  difficulty: complex
+  risk_level: medium
+  category: comunione_morte
+  source: golden
+- id: ST011
+  text: Couple completing assisted negotiation for consensual separation; agreement drafted (maintenance, custody, community
+    division, home to mother); at PM review concerns raised that maintenance amount inadequate for special-needs minor. PM's
+    role, modifications, community-property liquidation finalization?
+  expected_agents:
+  - A_negoziazione_assistita_e_mediazione_familiare
+  - A_separazione_consensuale
+  - A_tutela_minori
+  - A_patrimoniale_comunione
+  difficulty: complex
+  risk_level: medium
+  high_risk: true
+  category: assisted_negotiation_minor_review
+  source: stress
+- id: GS014
+  text: My father died under the legal community-of-property regime with my mother, leaving me and my brother as the only
+    heirs. How is the hereditary mass calculated?
+  expected_agents:
+  - A_succ_legittima
+  - A_patrimoniale_comunione
+  difficulty: complex
+  risk_level: medium
+  category: successione_comunione
+  source: golden
+- id: GS067
+  text: Chambers procedure (rito camerale) for the appointment of a guardian of an incapacitated person
+  expected_agents:
+  - A_volontaria_giurisdizione
+  difficulty: medium
+  risk_level: high
+  high_risk: true
+  category: tutela
+  source: golden
+- id: GS045
+  text: Decree of the guardianship judge authorizing the sale of a minor's real-estate asset
+  expected_agents:
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  difficulty: medium
+  risk_level: high
+  high_risk: true
+  category: vendita_beni_minore
+  source: golden
+- id: GS041
+  text: 'Notarial deed of consensual division of inherited assets: procedure and indicative costs'
+  expected_agents:
+  - A_negoziazione_assistita_e_mediazione_familiare
+  - A_succ_legittima
+  difficulty: medium
+  risk_level: low
+  category: divisione_notarile
+  source: golden
+- id: GS043
+  text: 'Maintenance of adult children who are not financially independent: how long does the obligation last?'
+  expected_agents:
+  - A_tutela_minori
+  difficulty: medium
+  risk_level: low
+  category: mantenimento_figli
+  source: golden
+- id: GS018
+  text: Can I obtain a joint divorce directly without first being separated?
+  expected_agents:
+  - A_separazione_consensuale
+  difficulty: medium
+  risk_level: low
+  category: divorzio_congiunto
+  source: golden
+- id: GS021
+  text: 'Assisted negotiation for divorce: differences compared to the procedure before the court'
+  expected_agents:
+  - A_separazione_consensuale
+  - A_negoziazione_assistita_e_mediazione_familiare
+  difficulty: medium
+  risk_level: low
+  category: adr_divorzio
+  source: golden
+- id: GS062
+  text: 'Succession of a spouse under the separation-of-property regime: shares of the surviving spouse'
+  expected_agents:
+  - A_patrimoniale_separazione
+  - A_succ_legittima
+  difficulty: medium
+  risk_level: low
+  category: separazione_successione
+  source: golden
+- id: GS010
+  text: 'Succession of a person without children, without a spouse, with two living siblings: how are the assets divided?'
+  expected_agents:
+  - A_succ_legittima
+  difficulty: medium
+  risk_level: low
+  category: successione_legittima
+  source: golden
+- id: GS020
+  text: Can we modify the consensual separation agreement after court approval?
+  expected_agents:
+  - A_separazione_consensuale
+  difficulty: medium
+  risk_level: medium
+  category: modifica_accordo
+  source: golden
+- id: GS015
+  text: 'Collation in Italian succession law: what does it consist of and which donations fall within it?'
+  expected_agents:
+  - A_succ_legittima
+  difficulty: medium
+  risk_level: medium
+  category: collazione
+  source: golden
+- id: GS054
+  text: 'Patrimonial fund (fondo patrimoniale): formation, eligible assets, administration regime'
+  expected_agents:
+  - A_patrimoniale_comunione
+  difficulty: medium
+  risk_level: medium
+  category: fondo_patrimoniale
+  source: golden
+- id: GS039
+  text: 'Family mediation agreement: enforceable value, court approval, third-party enforceability'
+  expected_agents:
+  - A_negoziazione_assistita_e_mediazione_familiare
+  difficulty: medium
+  risk_level: medium
+  category: adr_efficacia
+  source: golden
+- id: GS055
+  text: 'Dissolution of the legal community of property due to personal separation: date of effectiveness'
+  expected_agents:
+  - A_patrimoniale_comunione
+  - A_separazione_consensuale
+  difficulty: medium
+  risk_level: medium
+  category: scioglimento_comunione
+  source: golden
+- id: GS013
+  text: 'Renunciation of inheritance: required form, effects, and term for challenging it'
+  expected_agents:
+  - A_succ_legittima
+  - A_volontaria_giurisdizione
+  difficulty: medium
+  risk_level: medium
+  category: rinuncia
+  source: golden
+- id: GS042
+  text: How is shared custody of minor children established after separation?
+  expected_agents:
+  - A_tutela_minori
+  - A_separazione_consensuale
+  difficulty: medium
+  risk_level: medium
+  category: affidamento
+  source: golden
+- id: GAP_A004
+  text: Is the consent of a 14-year-old required for their international adoption under Italian law?
+  expected_agents:
+  - A_tutela_minori
+  difficulty: simple
+  risk_level: high
+  high_risk: true
+  category: adoption_minor_consent
+  expected_outcome: synthesise
+  source: gap_filler
+- id: GAP_A003
+  text: What is the term within which a minor's renunciation of inheritance must be filed?
+  expected_agents:
+  - A_succ_legittima
+  - A_tutela_minori
+  difficulty: simple
+  risk_level: high
+  high_risk: true
+  category: minor_inheritance_renunciation
+  expected_outcome: synthesise
+  source: gap_filler
+- id: GS006
+  text: Difference between a specific legacy and a generic legacy under Italian law
+  expected_agents:
+  - A_succ_testamentaria
+  difficulty: simple
+  risk_level: low
+  category: legato
+  source: golden
+- id: GS036
+  text: What is assisted negotiation in family matters and when is it mandatory?
+  expected_agents:
+  - A_negoziazione_assistita_e_mediazione_familiare
+  difficulty: simple
+  risk_level: low
+  category: adr_definizione
+  source: golden
+- id: GS001
+  text: What are the conditions for the validity of a holographic will?
+  expected_agents:
+  - A_succ_testamentaria
+  difficulty: simple
+  risk_level: low
+  category: succession_validity
+  source: golden
+- id: GS027
+  text: How long can a contentious separation proceeding last in Italy?
+  expected_agents:
+  - A_separazione_contenziosa
+  difficulty: simple
+  risk_level: low
+  category: procedural_meta
+  source: golden
+- id: GS065
+  text: 'Voluntary-jurisdiction proceedings: distinctive features compared to adversarial proceedings'
+  expected_agents:
+  - A_volontaria_giurisdizione
+  difficulty: simple
+  risk_level: low
+  category: vg_definizione
+  source: golden
+- id: GAP_A005
+  text: From what age must a minor be heard by the judge in proceedings concerning them?
+  expected_agents:
+  - A_tutela_minori
+  difficulty: simple
+  risk_level: medium
+  category: minor_hearing_age
+  expected_outcome: synthesise
+  source: gap_filler
+- id: GAP_A006
+  text: Can the surviving spouse waive the right of habitation on the family home granted by Italian succession law?
+  expected_agents:
+  - A_succ_legittima
+  difficulty: simple
+  risk_level: medium
+  category: spouse_habitation_waiver
+  expected_outcome: synthesise
+  source: gap_filler
+- id: NEW_TEST_001
+  text: What is the prescription period for an action to revoke a donation due to ingratitude of the donee under Italian civil
+    law?
+  expected_agents:
+  - A_succ_legittima
+  difficulty: simple
+  risk_level: medium
+  category: donation_revocation_term
+  notes: Distinct from NEW_CAL_001 (deadlines on will challenges). Single-agent on collation/donation rules.
+- id: NEW_TEST_002
+  text: When a child is born outside of marriage, what procedural steps must be followed for paternal recognition before the
+    civil registrar?
+  expected_agents:
+  - A_tutela_minori
+  difficulty: simple
+  risk_level: medium
+  category: minor_paternal_recognition
+  notes: Distinct from NEW_CAL_002 (registration with separated parents). Single-agent on recognition procedure.
+- id: NEW_TEST_003
+  text: Does refusing all post-separation contact with one parent, despite a court-ordered visitation schedule, constitute
+    grounds for modifying the custody arrangement of a minor?
+  expected_agents:
+  - A_tutela_minori
+  difficulty: simple
+  risk_level: high
+  category: minor_visitation_refusal
+  notes: 'Distinct from NEW_CAL_004 (religious instruction). High risk: parental alienation pattern.'
+- id: NEW_TEST_004
+  text: If a holographic will contains substantial deletions and overwrites that are not separately dated or signed, does
+    this affect its validity as a whole?
+  expected_agents:
+  - A_succ_testamentaria
+  difficulty: simple
+  risk_level: high
+  category: will_amendment_validity
+  notes: 'Distinct from NEW_CAL_005 (signature with nickname). High risk: validity-or-nullity question on Art. 602 c.c.'
+- id: NEW_TEST_005
+  text: After a consensual separation that included an obligation to maintain a minor in a specified school district, one
+    parent obtains a job offer requiring relocation to a different region. Procedure to modify the separation agreement and
+    standards applied?
+  expected_agents:
+  - A_tutela_minori
+  - A_separazione_consensuale
+  difficulty: medium
+  risk_level: high
+  category: minor_separation_modification
+  notes: 'Distinct from NEW_CAL_007 (cross-border relocation, contested separation). Two agents: minor protection + consensual-separation
+    modification.'
+- id: NEW_TEST_006
+  text: A testamentary trust established in a will is challenged by reserved-share heirs who claim the trust depletes their
+    legitima. The deceased's principal asset is real estate held jointly with the surviving spouse. Coordination between the
+    trust validity question and the spousal community?
+  expected_agents:
+  - A_succ_testamentaria
+  - A_succ_legittima
+  - A_patrimoniale_comunione
+  difficulty: medium
+  risk_level: high
+  category: trust_legittima_community
+  notes: 'Distinct from NEW_CAL_008 (handwriting authenticity). Three agents: testamentary trust + reserved share + community
+    of property.'
+- id: NEW_TEST_007
+  text: I want to challenge a will that was never written down by a testator who died fifty years before I was born. The will
+    leaves the estate to my future grandchildren who have not yet been conceived.
+  expected_agents: []
+  difficulty: medium
+  risk_level: medium
+  category: contradictory_facts
+  notes: 'Contradictions: ''never written down'' yet ''I want to challenge a will'' (no document to challenge); ''died fifty
+    years before I was born'' (no overlapping life); ''future grandchildren not yet conceived'' (no legal subjects). Should
+    ABSTAIN.'
+- id: NEW_TEST_008
+  text: The deceased had no children but the eldest of his three sons is challenging the partition. The partition was finalized
+    while the deceased was still alive and before he had any heirs.
+  expected_agents: []
+  difficulty: medium
+  risk_level: medium
+  category: contradictory_facts
+  notes: 'Contradictions: ''no children'' vs ''eldest of three sons''; ''partition finalized while deceased still alive'';
+    ''before he had any heirs'' (heirs exist only at death). Should ABSTAIN.'
+- id: NEW_TEST_009
+  text: Is this allowed?
+  expected_agents: []
+  difficulty: simple
+  risk_level: low
+  category: insufficient_facts
+  notes: 'Insufficient: no antecedent for ''this''. Should ABSTAIN.'
+- id: NEW_TEST_010
+  text: I have a problem with my family. What should I do?
+  expected_agents: []
+  difficulty: simple
+  risk_level: low
+  category: insufficient_facts
+  notes: 'Insufficient: no legal question, no situation, no actors named. Should ABSTAIN.'
+- id: NEW_TEST_011
+  text: Under French Code Civil, what are the requirements for an authentic will (testament authentique) when the testator
+    does not speak French?
+  expected_agents: []
+  difficulty: medium
+  risk_level: low
+  category: out_of_jurisdiction
+  notes: 'Out of jurisdiction: explicitly French law. Should ABSTAIN.'
+- id: NEW_TEST_012
+  text: What are the rights of an employee on a fixed-term contract whose employer extends the contract beyond the maximum
+    legal duration of 24 months?
+  expected_agents: []
+  difficulty: simple
+  risk_level: low
+  category: out_of_domain
+  notes: 'Out-of-domain: labour law (Jobs Act, Decreto Dignità), not family/succession. Distinct from NEW_CAL_017.'
+- id: NEW_TEST_013
+  text: Under what conditions can a consumer obtain a refund for a defective product purchased online from a vendor based
+    in another EU member state?
+  expected_agents: []
+  difficulty: simple
+  risk_level: low
+  category: out_of_domain
+  notes: 'Out-of-domain: cross-border consumer protection. Distinct from NEW_CAL_018.'
+- id: NEW_TEST_014
+  text: A limited liability company (S.r.l.) has been struck off the commercial register following voluntary liquidation.
+    A creditor whose claim was overlooked seeks recovery. Which procedure applies and against whom?
+  expected_agents: []
+  difficulty: medium
+  risk_level: low
+  category: out_of_domain
+  notes: 'Out-of-domain: corporate dissolution / creditor recovery, not family/succession. Distinct from NEW_CAL_019.'
+- id: NEW_TEST_015
+  text: What are the procedural requirements to challenge an act of the public administration before the Regional Administrative
+    Tribunal (TAR) within the prescription period?
+  expected_agents: []
+  difficulty: medium
+  risk_level: low
+  category: out_of_domain
+  notes: 'Out-of-domain: administrative procedure (TAR), not family/succession. Distinct from NEW_CAL_020.'

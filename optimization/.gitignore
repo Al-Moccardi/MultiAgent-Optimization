@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+# regenerated outputs (kept out of VCS; produced by the scripts)
+part*/results/figures/*.pdf
+part*/results/data/*

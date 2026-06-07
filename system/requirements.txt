@@ -1,0 +1,13 @@
+# MAMAP-Edge -- deployed system & section-12 dynamic layer.
+# Replay from the committed score cache + vector sidecar is CPU-only;
+# REBUILDING the cache (build_score_cache.py --embedder bge-m3) needs CUDA.
+-r ../requirements.txt
+pydantic>=2.5,<3.0              # frozen catalog/instance models (lean)
+highspy>=1.7,<2.0               # HiGHS solver for the lean allocator (sec. 12.4)
+sentence-transformers>=2.2      # BGE-M3 embedder for cache (re)build
+faiss-cpu>=1.8                  # retrieval indices (faiss-gpu optional)
+pytest>=8.0
+# Measurement-campaign extras (llama-cpp-python, ragas, datasets, psutil):
+#   pip install -r requirements-real.txt
+# External (not pip): llama.cpp server build b9204, CUDA 12.4 -- serves the
+# quantized GGUF models during measurement; not needed for cache replay.

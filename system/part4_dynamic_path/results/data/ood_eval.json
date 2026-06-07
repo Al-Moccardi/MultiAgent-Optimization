@@ -1,0 +1,149 @@
+{
+  "ood_file": "part4_dynamic_path\\data\\manifests\\ood_queries_en.yaml",
+  "calib_file": "part4_dynamic_path\\data\\manifests\\calibration_queries_en.yaml",
+  "embedder": "bge-m3",
+  "beta": 3.0,
+  "n_ood": 15,
+  "abstention_rate": 0.6,
+  "mean_false_k": 1.2,
+  "leak_by_domain": {
+    "A_succ_legittima": 4,
+    "A_separazione_contenziosa": 4,
+    "A_tutela_minori": 4,
+    "A_succ_testamentaria": 2,
+    "A_patrimoniale_comunione": 2,
+    "A_patrimoniale_separazione": 1,
+    "A_volontaria_giurisdizione": 1
+  },
+  "per_query": [
+    {
+      "id": "OOD_ITA_LABOR_01",
+      "query": "Under the Italian Statuto dei Lavoratori, what are the procedural requirements for an empl",
+      "abstained": true,
+      "false_k": 0,
+      "leaked_domains": []
+    },
+    {
+      "id": "OOD_ITA_TAX_01",
+      "query": "What is the statute of limitations for the Agenzia delle Entrate to assess undeclared VAT ",
+      "abstained": true,
+      "false_k": 0,
+      "leaked_domains": []
+    },
+    {
+      "id": "OOD_ITA_CRIMINAL_01",
+      "query": "In Italian criminal procedure, what are the conditions under which a confession obtained d",
+      "abstained": true,
+      "false_k": 0,
+      "leaked_domains": []
+    },
+    {
+      "id": "OOD_ITA_ADMIN_01",
+      "query": "What is the deadline to file a ricorso al TAR against a permit-to-build refusal issued by ",
+      "abstained": true,
+      "false_k": 0,
+      "leaked_domains": []
+    },
+    {
+      "id": "OOD_JUR_BR_SUCCESSION_01",
+      "query": "Under Brazilian succession law (Código Civil de 2002, Art. 1845), what is the maximum disp",
+      "abstained": false,
+      "false_k": 6,
+      "leaked_domains": [
+        "A_patrimoniale_comunione",
+        "A_patrimoniale_separazione",
+        "A_separazione_contenziosa",
+        "A_succ_legittima",
+        "A_succ_testamentaria",
+        "A_tutela_minori"
+      ]
+    },
+    {
+      "id": "OOD_JUR_DE_FAMILY_01",
+      "query": "Under German family law (BGB §1626 ff.), can a parent who shares joint custody (gemeinsame",
+      "abstained": false,
+      "false_k": 2,
+      "leaked_domains": [
+        "A_separazione_contenziosa",
+        "A_tutela_minori"
+      ]
+    },
+    {
+      "id": "OOD_JUR_FR_CIVIL_01",
+      "query": "In French civil procedure, what is the difference between an opposition and a tierce oppos",
+      "abstained": true,
+      "false_k": 0,
+      "leaked_domains": []
+    },
+    {
+      "id": "OOD_JUR_ES_PROPERTY_01",
+      "query": "Under Spanish property law (Código Civil, Art. 392 ff.), how does the actio communi dividu",
+      "abstained": false,
+      "false_k": 1,
+      "leaked_domains": [
+        "A_separazione_contenziosa"
+      ]
+    },
+    {
+      "id": "OOD_NONLEGAL_COOKING_01",
+      "query": "What is the ideal oven temperature and total baking time for a Neapolitan-style pizza doug",
+      "abstained": true,
+      "false_k": 0,
+      "leaked_domains": []
+    },
+    {
+      "id": "OOD_NONLEGAL_TECH_01",
+      "query": "When using PostgreSQL 16 with logical replication, how do I configure replica identity for",
+      "abstained": true,
+      "false_k": 0,
+      "leaked_domains": []
+    },
+    {
+      "id": "OOD_NONLEGAL_HISTORY_01",
+      "query": "What were the principal economic and military causes that led to the dissolution of the Ha",
+      "abstained": true,
+      "false_k": 0,
+      "leaked_domains": []
+    },
+    {
+      "id": "OOD_NONLEGAL_MEDICAL_01",
+      "query": "What are the current first-line pharmacological treatments for newly diagnosed Stage II hy",
+      "abstained": true,
+      "false_k": 0,
+      "leaked_domains": []
+    },
+    {
+      "id": "OOD_MALFORMED_SINGLEWORD_01",
+      "query": "successione",
+      "abstained": false,
+      "false_k": 3,
+      "leaked_domains": [
+        "A_separazione_contenziosa",
+        "A_succ_legittima",
+        "A_tutela_minori"
+      ]
+    },
+    {
+      "id": "OOD_MALFORMED_WRONGLANG_01",
+      "query": "私の祖父が遺言を残さずに亡くなりました。彼の財産は誰が相続しますか?日本の民法に基づいて教えてください。",
+      "abstained": false,
+      "false_k": 2,
+      "leaked_domains": [
+        "A_patrimoniale_comunione",
+        "A_succ_legittima"
+      ]
+    },
+    {
+      "id": "OOD_MALFORMED_NOISE_01",
+      "query": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ",
+      "abstained": false,
+      "false_k": 4,
+      "leaked_domains": [
+        "A_succ_legittima",
+        "A_succ_testamentaria",
+        "A_tutela_minori",
+        "A_volontaria_giurisdizione"
+      ]
+    }
+  ]
+}

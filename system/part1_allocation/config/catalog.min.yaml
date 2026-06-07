@@ -1,0 +1,29 @@
+# Minimal catalog for a first REAL run on CPU (router accuracy only).
+# 3 small Italian-capable models, Q4 only, single context -> 3 GGUF files.
+# Download the files into a `models/` folder (see README / runbook), then the
+# paths below must match the downloaded file names.
+
+models:
+  - key: qwen2.5-0_5b
+    name: Qwen2.5-0.5B-Instruct
+    hf_id: Qwen/Qwen2.5-0.5B-Instruct
+    params_b: 0.5
+    contexts: [4096]
+    quantizations:
+      - {label: Q4_K_M, gguf_path: "models/qwen2.5-0.5b-instruct-q4_k_m.gguf"}
+
+  - key: qwen2.5-1_5b
+    name: Qwen2.5-1.5B-Instruct
+    hf_id: Qwen/Qwen2.5-1.5B-Instruct
+    params_b: 1.5
+    contexts: [4096]
+    quantizations:
+      - {label: Q4_K_M, gguf_path: "models/qwen2.5-1.5b-instruct-q4_k_m.gguf"}
+
+  - key: qwen2.5-3b
+    name: Qwen2.5-3B-Instruct
+    hf_id: Qwen/Qwen2.5-3B-Instruct
+    params_b: 3.0
+    contexts: [4096]
+    quantizations:
+      - {label: Q4_K_M, gguf_path: "models/qwen2.5-3b-instruct-q4_k_m.gguf"}

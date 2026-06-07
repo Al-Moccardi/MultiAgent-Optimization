@@ -1,0 +1,16 @@
+# mamap_repo/lean — extra deps on top of mamap_repo/requirements.txt
+#
+# Install:
+#   pip install -r mamap_repo/requirements.txt
+#   pip install -r mamap_repo/lean/requirements.txt
+
+highspy>=1.7,<2.0       # HiGHS MILP solver (direct binding; faster sweep than PuLP+CBC)
+pydantic>=2.5,<3.0      # frozen catalog/instance models with validation
+pyyaml>=6.0             # YAML configs
+pytest>=8.0             # tests
+pytest-xdist>=3.5       # parallel test runs
+
+# Optional — only for the MultiHop-RAG eval harness (L5):
+# datasets>=2.20
+# huggingface-hub>=0.24
+# sentence-transformers>=2.2

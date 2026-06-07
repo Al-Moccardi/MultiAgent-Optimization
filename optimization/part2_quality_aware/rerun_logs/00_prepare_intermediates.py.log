@@ -1,0 +1,6 @@
+quality_cost_merged.parquet: 500 rows
+agg_frontier.parquet: 50 configs, 4 on the latency frontier
+dispatcher_f1.parquet: 10 models
+proxy_vs_quality.csv: 7 budgets, mean gap 0.050, max 0.131
+policy_compare.parquet: 105 budget steps
+part2 intermediates ready.

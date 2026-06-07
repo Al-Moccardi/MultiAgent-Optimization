@@ -1,0 +1,25 @@
+# Lean catalog — Qwen2.5 only.
+#
+# 3 sizes × 3 quantisations × 3 contexts = 27 raw triples. Every row has
+# measured ttft / throughput / energy in the colleague's perf_table.parquet on
+# the RTX 4070 Laptop GPU; no analytical fallback needed for this catalog.
+#
+# Static architecture (n_layers, n_kv_heads, head_dim) for each model is set
+# by `build_catalog.py` from the Qwen2.5 config.json values (well documented;
+# constants below are mirrored in the builder).
+
+family: Qwen2.5
+
+models:
+  - { hf_id: Qwen/Qwen2.5-0.5B-Instruct, perf_prefix: qwen2.5-0_5b }
+  - { hf_id: Qwen/Qwen2.5-1.5B-Instruct, perf_prefix: qwen2.5-1_5b }
+  - { hf_id: Qwen/Qwen2.5-3B-Instruct,   perf_prefix: qwen2.5-3b   }
+
+# Matches what the colleague measured (Q3_K_M, Q5_K_M, Q8_0). Different from
+# `main` MAMAP's {Q4_K_M, Q8_0, F16} — deliberate, to keep every row measured.
+quants: [Q3_K_M, Q5_K_M, Q8_0]
+
+contexts: [2048, 4096, 8192]
+
+# Hardware budget for this catalog. Used as the default M in experiment YAMLs.
+memory_gb: 6.99

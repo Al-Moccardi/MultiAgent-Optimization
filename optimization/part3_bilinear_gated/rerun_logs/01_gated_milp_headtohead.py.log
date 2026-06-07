@@ -1,0 +1,13 @@
+activated domains: ['succ_legittima', 'succ_testamentaria', 'tutela_minori']
+
+ eps  ADDITIVE                          BILINEAR                          differ?
+   8  phi3.5-min|smollm2-36|llama3.2-1  smollm2-36|smollm2-36|llama3.2-1  <<< DIFFERENT
+  10  phi3.5-min|llama3.2-1|llama3.2-1  smollm2-36|llama3.2-1|llama3.2-1  <<< DIFFERENT
+  12  phi3.5-min|llama3.2-1|gemma2-2b   smollm2-36|llama3.2-1|gemma2-2b   <<< DIFFERENT
+  14  phi3.5-min|llama3.2-1|phi3.5-min  smollm2-36|llama3.2-1|phi3.5-min  <<< DIFFERENT
+  16  phi3.5-min|llama3.2-1|phi3.5-min  smollm2-36|llama3.2-1|phi3.5-min  <<< DIFFERENT
+  18  mistral-7b|llama3.2-1|mistral-7b  smollm2-36|llama3.2-1|mistral-7b  <<< DIFFERENT
+  20  mistral-7b|llama3.2-1|mistral-7b  smollm2-36|llama3.2-1|mistral-7b  <<< DIFFERENT
+  24  mistral-7b|llama3.2-1|mistral-7b  smollm2-36|llama3.2-1|mistral-7b  <<< DIFFERENT
+
+Diverse in 8/8 budget. Recall di esempio (Mistral): succ_test=1.00, patr_com=0.10

@@ -1,0 +1,24 @@
+# SLM "zoo": a curated registry of small, Italian-capable instruct models with
+# their HuggingFace GGUF repositories. The catalog generator (tools/gen_catalog.py)
+# expands a chosen subset into a full catalog, resolving exact GGUF filenames from
+# each repo (so you don't hand-write fragile filenames).
+#
+# Notes:
+#  * params_b is provenance / tie-break only (NOT the objective).
+#  * Repos/filenames change; the generator reports any it cannot resolve so you can
+#    fix `gguf_repo` here. Add or remove models freely.
+#  * Skewed to models that fit a laptop budget (<= ~8B). The generator's --max-params
+#    filter drops anything too big for your device.
+
+models:
+  - {key: qwen2.5-0_5b,  name: Qwen2.5-0.5B-Instruct,  hf_id: Qwen/Qwen2.5-0.5B-Instruct,  gguf_repo: Qwen/Qwen2.5-0.5B-Instruct-GGUF,  params_b: 0.5}
+  - {key: qwen2.5-1_5b,  name: Qwen2.5-1.5B-Instruct,  hf_id: Qwen/Qwen2.5-1.5B-Instruct,  gguf_repo: Qwen/Qwen2.5-1.5B-Instruct-GGUF,  params_b: 1.5}
+  - {key: qwen2.5-3b,    name: Qwen2.5-3B-Instruct,    hf_id: Qwen/Qwen2.5-3B-Instruct,    gguf_repo: Qwen/Qwen2.5-3B-Instruct-GGUF,    params_b: 3.0}
+  - {key: qwen2.5-7b,    name: Qwen2.5-7B-Instruct,    hf_id: Qwen/Qwen2.5-7B-Instruct,    gguf_repo: Qwen/Qwen2.5-7B-Instruct-GGUF,    params_b: 7.6}
+  - {key: llama3.2-1b,   name: Llama-3.2-1B-Instruct,  hf_id: meta-llama/Llama-3.2-1B-Instruct, gguf_repo: bartowski/Llama-3.2-1B-Instruct-GGUF, params_b: 1.2}
+  - {key: llama3.2-3b,   name: Llama-3.2-3B-Instruct,  hf_id: meta-llama/Llama-3.2-3B-Instruct, gguf_repo: bartowski/Llama-3.2-3B-Instruct-GGUF, params_b: 3.2}
+  - {key: gemma2-2b,     name: Gemma-2-2B-it,          hf_id: google/gemma-2-2b-it,        gguf_repo: bartowski/gemma-2-2b-it-GGUF,     params_b: 2.6}
+  - {key: phi3.5-mini,   name: Phi-3.5-mini-instruct,  hf_id: microsoft/Phi-3.5-mini-instruct, gguf_repo: bartowski/Phi-3.5-mini-instruct-GGUF, params_b: 3.8}
+  - {key: smollm2-360m,  name: SmolLM2-360M-Instruct,  hf_id: HuggingFaceTB/SmolLM2-360M-Instruct, gguf_repo: bartowski/SmolLM2-360M-Instruct-GGUF, params_b: 0.36}
+  - {key: smollm2-1_7b,  name: SmolLM2-1.7B-Instruct,  hf_id: HuggingFaceTB/SmolLM2-1.7B-Instruct, gguf_repo: bartowski/SmolLM2-1.7B-Instruct-GGUF, params_b: 1.7}
+  - {key: mistral-7b,    name: Mistral-7B-Instruct-v0.3, hf_id: mistralai/Mistral-7B-Instruct-v0.3, gguf_repo: bartowski/Mistral-7B-Instruct-v0.3-GGUF, params_b: 7.2}

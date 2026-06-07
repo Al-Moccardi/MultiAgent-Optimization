@@ -1,0 +1,86 @@
+# Agents of the multi-agent system.
+# The dispatcher is the critical 10th agent (a misroute is wrong regardless of
+# the specialist's quality). c_min = minimum context length the agent requires.
+agents:
+  - id: A_dispatcher
+    name: dispatcher / router
+    description: >-
+      Classifies the incoming Italian family-law query into one of the nine
+      specialist domains and routes it. Critical agent: routing errors poison
+      the whole pipeline.
+    is_dispatcher: true
+    c_min: 2048
+
+  - id: A_succ_testamentaria
+    name: testate succession
+    description: >-
+      Inheritance governed by a valid will: wills, testators, designated heirs,
+      legacies, will contestation and revocation.
+    c_min: 4096
+
+  - id: A_succ_legittima
+    name: intestate succession
+    description: >-
+      Inheritance by operation of law when no valid will exists: legal heirs,
+      shares, representation, lapsed inheritance.
+    c_min: 4096
+
+  - id: A_separazione_consensuale
+    name: consensual separation
+    description: >-
+      Spousal separation by mutual agreement: separation agreements, ratification
+      by the court, division of obligations agreed by the parties.
+    c_min: 4096
+
+  - id: A_separazione_contenziosa
+    name: contested separation
+    description: >-
+      Spousal separation litigated before the court: fault attribution,
+      contested provisions, evidentiary proceedings between spouses.
+    c_min: 8192
+
+  - id: A_negoziazione_assistita_e_mediazione_familiare
+    name: assisted negotiation and family mediation
+    description: >-
+      Out-of-court resolution of family disputes: lawyer-assisted negotiation,
+      family mediation processes, alternative dispute resolution in family law.
+    c_min: 4096
+
+  - id: A_tutela_minori
+    name: minor protection
+    description: >-
+      Protection of minors: custody, parental authority, guardianship,
+      child-protection measures, juvenile court matters.
+    c_min: 8192
+
+  - id: A_patrimoniale_comunione
+    name: community of property
+    description: >-
+      Matrimonial property under the community-of-property regime: joint
+      ownership of assets acquired during marriage, joint debts, dissolution.
+    c_min: 4096
+
+  - id: A_patrimoniale_separazione
+    name: separation of property
+    description: >-
+      Matrimonial property under the separation-of-property regime: separately
+      owned assets, choice of regime, conversion between regimes.
+    c_min: 4096
+
+  - id: A_volontaria_giurisdizione
+    name: non-contentious jurisdiction
+    description: >-
+      Non-contentious court proceedings: authorizations, ratifications,
+      appointments of administrators, acts without adversarial parties.
+    c_min: 4096
+
+  - id: A_synth
+    name: synthesiser / final-answer composer
+    description: >-
+      Combines the activated specialists' answers (plus the retrieved contexts)
+      into the single coherent user-facing response. Runs after the specialists
+      in the per-query latency chain. Its quality is the user-visible quality
+      of the system. Approximation in evaluation (v2): scored on the same
+      question+contexts as a specialist (proxy for "given specialist outputs").
+    is_dispatcher: false
+    c_min: 8192

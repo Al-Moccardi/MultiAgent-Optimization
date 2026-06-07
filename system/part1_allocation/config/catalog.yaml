@@ -1,0 +1,54 @@
+# Candidate configuration catalog: models x quantizations x contexts.
+# Target ~24-30 configs. EDIT gguf_path to your local GGUF files.
+# Pick Italian-capable models (vet before including). All must run via llama.cpp.
+#
+# config_id is auto-built as: <key>__<quant.label>__c<context>
+#
+# NOTE: params_b is provenance / tie-break ONLY -- it is NOT the objective.
+#       The objective is measured quality Q_{a,k} from the quality sweep.
+
+models:
+  - key: qwen2.5-0_5b
+    name: Qwen2.5-0.5B-Instruct
+    hf_id: Qwen/Qwen2.5-0.5B-Instruct
+    params_b: 0.5
+    contexts: [4096, 8192]
+    quantizations:
+      - {label: Q4_K_M, gguf_path: "models/qwen2.5-0.5b-instruct-q4_k_m.gguf"}
+      - {label: Q8_0,   gguf_path: "models/qwen2.5-0.5b-instruct-q8_0.gguf"}
+
+  - key: qwen2.5-1_5b
+    name: Qwen2.5-1.5B-Instruct
+    hf_id: Qwen/Qwen2.5-1.5B-Instruct
+    params_b: 1.5
+    contexts: [4096, 8192]
+    quantizations:
+      - {label: Q4_K_M, gguf_path: "models/qwen2.5-1.5b-instruct-q4_k_m.gguf"}
+      - {label: Q8_0,   gguf_path: "models/qwen2.5-1.5b-instruct-q8_0.gguf"}
+
+  - key: qwen2.5-3b
+    name: Qwen2.5-3B-Instruct
+    hf_id: Qwen/Qwen2.5-3B-Instruct
+    params_b: 3.0
+    contexts: [4096, 8192]
+    quantizations:
+      - {label: Q4_K_M, gguf_path: "models/qwen2.5-3b-instruct-q4_k_m.gguf"}
+      - {label: Q8_0,   gguf_path: "models/qwen2.5-3b-instruct-q8_0.gguf"}
+
+  - key: llama3.2-3b
+    name: Llama-3.2-3B-Instruct
+    hf_id: meta-llama/Llama-3.2-3B-Instruct
+    params_b: 3.2
+    contexts: [4096, 8192]
+    quantizations:
+      - {label: Q4_K_M, gguf_path: "models/llama-3.2-3b-instruct-q4_k_m.gguf"}
+      - {label: Q8_0,   gguf_path: "models/llama-3.2-3b-instruct-q8_0.gguf"}
+
+  - key: qwen2.5-7b
+    name: Qwen2.5-7B-Instruct
+    hf_id: Qwen/Qwen2.5-7B-Instruct
+    params_b: 7.6
+    contexts: [4096, 8192]
+    quantizations:
+      - {label: Q4_K_M, gguf_path: "models/qwen2.5-7b-instruct-q4_k_m.gguf"}
+      - {label: Q8_0,   gguf_path: "models/qwen2.5-7b-instruct-q8_0.gguf"}

@@ -1,0 +1,593 @@
+{
+  "agent_to_role": {
+    "A_<specialist_*>": "s (domain = name after 'A_')",
+    "A_dispatcher": "d",
+    "A_synth": "y"
+  },
+  "family_prefix": "qwen2.5-",
+  "generated_at": "2026-06-04T13:31:22.618794+00:00",
+  "generator": "scripts/import_colleague_quality.py",
+  "n_queries_diagnostic": {
+    "d|qwen2.5-0_5b__Q4_K_M__c4096|": {
+      "mean": 0.49832451499118163,
+      "n_queries": 27
+    },
+    "d|qwen2.5-0_5b__Q4_K_M__c8192|": {
+      "mean": 0.49832451499118163,
+      "n_queries": 27
+    },
+    "d|qwen2.5-0_5b__Q8_0__c4096|": {
+      "mean": 0.4646972369194591,
+      "n_queries": 27
+    },
+    "d|qwen2.5-0_5b__Q8_0__c8192|": {
+      "mean": 0.4646972369194591,
+      "n_queries": 27
+    },
+    "d|qwen2.5-1_5b__Q4_K_M__c4096|": {
+      "mean": 0.640652557319224,
+      "n_queries": 27
+    },
+    "d|qwen2.5-1_5b__Q4_K_M__c8192|": {
+      "mean": 0.640652557319224,
+      "n_queries": 27
+    },
+    "d|qwen2.5-1_5b__Q8_0__c4096|": {
+      "mean": 0.6386243386243386,
+      "n_queries": 27
+    },
+    "d|qwen2.5-1_5b__Q8_0__c8192|": {
+      "mean": 0.6386243386243386,
+      "n_queries": 27
+    },
+    "d|qwen2.5-3b__Q4_K_M__c4096|": {
+      "mean": 0.6959729570840681,
+      "n_queries": 27
+    },
+    "d|qwen2.5-3b__Q4_K_M__c8192|": {
+      "mean": 0.6959729570840681,
+      "n_queries": 27
+    },
+    "d|qwen2.5-3b__Q8_0__c4096|": {
+      "mean": 0.829482657260435,
+      "n_queries": 27
+    },
+    "d|qwen2.5-3b__Q8_0__c8192|": {
+      "mean": 0.829482657260435,
+      "n_queries": 27
+    },
+    "d|qwen2.5-7b__Q4_K_M__c4096|": {
+      "mean": 0.8723104056437391,
+      "n_queries": 27
+    },
+    "d|qwen2.5-7b__Q4_K_M__c8192|": {
+      "mean": 0.8723104056437391,
+      "n_queries": 27
+    },
+    "d|qwen2.5-7b__Q8_0__c4096|": {
+      "mean": 0.8350809684143017,
+      "n_queries": 27
+    },
+    "d|qwen2.5-7b__Q8_0__c8192|": {
+      "mean": 0.8350809684143017,
+      "n_queries": 27
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c4096|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c4096|patrimoniale_comunione": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c4096|patrimoniale_separazione": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c4096|separazione_consensuale": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c4096|succ_legittima": {
+      "mean": 0.46499999999999997,
+      "n_queries": 2
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c4096|succ_testamentaria": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c4096|volontaria_giurisdizione": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c8192|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c8192|patrimoniale_comunione": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c8192|patrimoniale_separazione": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c8192|separazione_consensuale": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c8192|separazione_contenziosa": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c8192|succ_legittima": {
+      "mean": 0.46499999999999997,
+      "n_queries": 2
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c8192|succ_testamentaria": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c8192|tutela_minori": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q4_K_M__c8192|volontaria_giurisdizione": {
+      "mean": 0.46499999999999997,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c4096|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c4096|patrimoniale_comunione": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c4096|patrimoniale_separazione": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c4096|separazione_consensuale": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c4096|succ_legittima": {
+      "mean": 0.49,
+      "n_queries": 2
+    },
+    "s|qwen2.5-0_5b__Q8_0__c4096|succ_testamentaria": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c4096|volontaria_giurisdizione": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c8192|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c8192|patrimoniale_comunione": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c8192|patrimoniale_separazione": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c8192|separazione_consensuale": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c8192|separazione_contenziosa": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c8192|succ_legittima": {
+      "mean": 0.49,
+      "n_queries": 2
+    },
+    "s|qwen2.5-0_5b__Q8_0__c8192|succ_testamentaria": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c8192|tutela_minori": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-0_5b__Q8_0__c8192|volontaria_giurisdizione": {
+      "mean": 0.49,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c4096|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c4096|patrimoniale_comunione": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c4096|patrimoniale_separazione": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c4096|separazione_consensuale": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c4096|succ_legittima": {
+      "mean": 0.6024999999999999,
+      "n_queries": 2
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c4096|succ_testamentaria": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c4096|volontaria_giurisdizione": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c8192|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c8192|patrimoniale_comunione": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c8192|patrimoniale_separazione": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c8192|separazione_consensuale": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c8192|separazione_contenziosa": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c8192|succ_legittima": {
+      "mean": 0.6024999999999999,
+      "n_queries": 2
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c8192|succ_testamentaria": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c8192|tutela_minori": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q4_K_M__c8192|volontaria_giurisdizione": {
+      "mean": 0.6024999999999999,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c4096|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c4096|patrimoniale_comunione": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c4096|patrimoniale_separazione": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c4096|separazione_consensuale": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c4096|succ_legittima": {
+      "mean": 0.6275,
+      "n_queries": 2
+    },
+    "s|qwen2.5-1_5b__Q8_0__c4096|succ_testamentaria": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c4096|volontaria_giurisdizione": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c8192|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c8192|patrimoniale_comunione": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c8192|patrimoniale_separazione": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c8192|separazione_consensuale": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c8192|separazione_contenziosa": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c8192|succ_legittima": {
+      "mean": 0.6275,
+      "n_queries": 2
+    },
+    "s|qwen2.5-1_5b__Q8_0__c8192|succ_testamentaria": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c8192|tutela_minori": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-1_5b__Q8_0__c8192|volontaria_giurisdizione": {
+      "mean": 0.6275,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c4096|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c4096|patrimoniale_comunione": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c4096|patrimoniale_separazione": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c4096|separazione_consensuale": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c4096|succ_legittima": {
+      "mean": 0.7085113017829205,
+      "n_queries": 2
+    },
+    "s|qwen2.5-3b__Q4_K_M__c4096|succ_testamentaria": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c4096|volontaria_giurisdizione": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c8192|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c8192|patrimoniale_comunione": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c8192|patrimoniale_separazione": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c8192|separazione_consensuale": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c8192|separazione_contenziosa": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c8192|succ_legittima": {
+      "mean": 0.7085113017829205,
+      "n_queries": 2
+    },
+    "s|qwen2.5-3b__Q4_K_M__c8192|succ_testamentaria": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c8192|tutela_minori": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q4_K_M__c8192|volontaria_giurisdizione": {
+      "mean": 0.7085113017829205,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c4096|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c4096|patrimoniale_comunione": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c4096|patrimoniale_separazione": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c4096|separazione_consensuale": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c4096|succ_legittima": {
+      "mean": 0.7335113017829206,
+      "n_queries": 2
+    },
+    "s|qwen2.5-3b__Q8_0__c4096|succ_testamentaria": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c4096|volontaria_giurisdizione": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c8192|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c8192|patrimoniale_comunione": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c8192|patrimoniale_separazione": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c8192|separazione_consensuale": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c8192|separazione_contenziosa": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c8192|succ_legittima": {
+      "mean": 0.7335113017829206,
+      "n_queries": 2
+    },
+    "s|qwen2.5-3b__Q8_0__c8192|succ_testamentaria": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c8192|tutela_minori": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-3b__Q8_0__c8192|volontaria_giurisdizione": {
+      "mean": 0.7335113017829206,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c4096|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c4096|patrimoniale_comunione": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c4096|patrimoniale_separazione": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c4096|separazione_consensuale": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c4096|succ_legittima": {
+      "mean": 0.8749642623496237,
+      "n_queries": 2
+    },
+    "s|qwen2.5-7b__Q4_K_M__c4096|succ_testamentaria": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c4096|volontaria_giurisdizione": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c8192|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c8192|patrimoniale_comunione": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c8192|patrimoniale_separazione": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c8192|separazione_consensuale": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c8192|separazione_contenziosa": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c8192|succ_legittima": {
+      "mean": 0.8749642623496237,
+      "n_queries": 2
+    },
+    "s|qwen2.5-7b__Q4_K_M__c8192|succ_testamentaria": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c8192|tutela_minori": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q4_K_M__c8192|volontaria_giurisdizione": {
+      "mean": 0.8749642623496237,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c4096|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c4096|patrimoniale_comunione": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c4096|patrimoniale_separazione": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c4096|separazione_consensuale": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c4096|succ_legittima": {
+      "mean": 0.8993481967622178,
+      "n_queries": 2
+    },
+    "s|qwen2.5-7b__Q8_0__c4096|succ_testamentaria": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c4096|volontaria_giurisdizione": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c8192|negoziazione_assistita_e_mediazione_familiare": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c8192|patrimoniale_comunione": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c8192|patrimoniale_separazione": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c8192|separazione_consensuale": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c8192|separazione_contenziosa": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c8192|succ_legittima": {
+      "mean": 0.8993481967622178,
+      "n_queries": 2
+    },
+    "s|qwen2.5-7b__Q8_0__c8192|succ_testamentaria": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c8192|tutela_minori": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    },
+    "s|qwen2.5-7b__Q8_0__c8192|volontaria_giurisdizione": {
+      "mean": 0.8993481967622178,
+      "n_queries": 1
+    }
+  },
+  "n_rows_out": 144,
+  "notes": "Per role d / y: mean(quality) across queries the agent was scored on. Per role s: mean(quality) per (config, specialist) restricted to the queries the specialist was activated on \u2014 the colleague's ground-truth for 'this specialist's quality on its domain'.",
+  "quality_source": "colleague:shared/data/quality_table.parquet",
+  "source_path": "mamap_new/shared/pareto/quality_table.parquet",
+  "source_sha256": "7e0c733e47ba1e25e9c9d574dd4abdeac26180931368a84d4edfb6e82e163085"
+}

@@ -1,0 +1,28 @@
+name: lean_8gb
+
+# Catalog produced by `python -m catalog.build_catalog`; path is relative to
+# `lean/`. See README for the build step.
+catalog: catalog/catalog.json
+
+memory_gb: 6.99           # M — RTX 4070 Laptop usable VRAM (matches colleague)
+t_circ_s: 8.0             # T° — hard end-to-end latency SLA (concurrent model)
+
+# Per-role generated-token budgets — match the colleague's setup so the
+# absolute Q numbers are directly comparable.
+n_d: 15
+n_s: 384
+n_y: 384
+
+# Specialist domains. Set to the 9 family-law domains the colleague measured
+# (Q_s comes from `lean/catalog/quality.parquet` produced by
+# `scripts/import_colleague_quality.py`).
+domains:
+  - succ_testamentaria
+  - succ_legittima
+  - separazione_consensuale
+  - separazione_contenziosa
+  - negoziazione_assistita_e_mediazione_familiare
+  - tutela_minori
+  - patrimoniale_comunione
+  - patrimoniale_separazione
+  - volontaria_giurisdizione

@@ -1,0 +1,65 @@
+  k=1 eps=6.0: bilQ=1.453 addQ=1.303  [1 pts]
+  k=1 eps=7.5: bilQ=1.515 addQ=1.364  [2 pts]
+  k=1 eps=9.0: bilQ=1.528 addQ=1.380  [3 pts]
+  k=1 eps=10.5: bilQ=1.528 addQ=1.380  [4 pts]
+  k=1 eps=12.0: bilQ=1.563 addQ=1.563  [5 pts]
+  k=1 eps=13.5: bilQ=1.563 addQ=1.243  [6 pts]
+  k=1 eps=15.0: bilQ=1.563 addQ=1.243  [7 pts]
+  k=1 eps=16.5: bilQ=1.563 addQ=1.243  [8 pts]
+  k=1 eps=18.0: bilQ=1.563 addQ=1.243  [9 pts]
+  k=1 eps=19.5: bilQ=1.563 addQ=1.243  [10 pts]
+  k=1 eps=21.0: bilQ=1.563 addQ=1.240  [11 pts]
+  k=1 eps=22.5: bilQ=1.563 addQ=1.240  [12 pts]
+  k=1 eps=24.0: bilQ=1.563 addQ=1.240  [13 pts]
+  k=1 eps=25.5: bilQ=1.563 addQ=1.240  [14 pts]
+  k=1 eps=27.0: bilQ=1.563 addQ=1.240  [15 pts]
+  k=1 eps=28.5: bilQ=1.563 addQ=1.240  [16 pts]
+  k=3 eps=7.5: bilQ=1.372 addQ=1.257  [17 pts]
+  k=3 eps=9.0: bilQ=1.433 addQ=1.302  [18 pts]
+  k=3 eps=10.5: bilQ=1.473 addQ=1.341  [19 pts]
+  k=3 eps=12.0: bilQ=1.534 addQ=1.402  [20 pts]
+  k=3 eps=13.5: bilQ=1.549 addQ=1.418  [21 pts]
+  k=3 eps=15.0: bilQ=1.549 addQ=1.418  [22 pts]
+  k=3 eps=16.5: bilQ=1.585 addQ=1.585  [23 pts]
+  k=3 eps=18.0: bilQ=1.585 addQ=1.470  [24 pts]
+  k=3 eps=19.5: bilQ=1.585 addQ=1.470  [25 pts]
+  k=3 eps=21.0: bilQ=1.585 addQ=1.470  [26 pts]
+  k=3 eps=22.5: bilQ=1.585 addQ=1.470  [27 pts]
+  k=3 eps=24.0: bilQ=1.585 addQ=1.470  [28 pts]
+  k=3 eps=25.5: bilQ=1.585 addQ=1.470  [29 pts]
+  k=3 eps=27.0: bilQ=1.585 addQ=1.470  [30 pts]
+  k=3 eps=28.5: bilQ=1.585 addQ=1.470  [31 pts]
+  k=5 eps=10.5: bilQ=1.283 addQ=1.186  [32 pts]
+  k=5 eps=12.0: bilQ=1.293 addQ=1.196  [33 pts]
+  k=5 eps=13.5: bilQ=1.369 addQ=1.231  [34 pts]
+  k=5 eps=15.0: bilQ=1.392 addQ=1.270  [35 pts]
+  k=5 eps=16.5: bilQ=1.453 addQ=1.385  [36 pts]
+  k=5 eps=18.0: bilQ=1.458 addQ=1.347  [37 pts]
+  k=5 eps=19.5: bilQ=1.458 addQ=1.347  [38 pts]
+  k=5 eps=21.0: bilQ=1.458 addQ=1.347  [39 pts]
+  k=5 eps=22.5: bilQ=1.504 addQ=1.279  [40 pts]
+  k=5 eps=24.0: bilQ=1.504 addQ=1.279  [41 pts]
+  k=5 eps=25.5: bilQ=1.504 addQ=1.279  [42 pts]
+  k=5 eps=27.0: bilQ=1.504 addQ=1.279  [43 pts]
+  k=5 eps=28.5: bilQ=1.504 addQ=1.279  [44 pts]
+saved gated frontier: 44 rows  (paper: 44)
+
+=== k=3 frontier (gated quality) ===
+eps=  7.5 bilQ=1.372 addQ=1.257 gap=+0.115  smollm2-360m|smollm2-360m|llama3.2-1b
+eps=  9.0 bilQ=1.433 addQ=1.302 gap=+0.132  smollm2-360m|llama3.2-1b|qwen2.5-0_5b
+eps= 10.5 bilQ=1.473 addQ=1.341 gap=+0.132  smollm2-360m|llama3.2-1b|llama3.2-1b
+eps= 12.0 bilQ=1.534 addQ=1.402 gap=+0.132  smollm2-360m|llama3.2-1b|gemma2-2b
+eps= 13.5 bilQ=1.549 addQ=1.418 gap=+0.132  smollm2-360m|llama3.2-1b|phi3.5-mini
+eps= 15.0 bilQ=1.549 addQ=1.418 gap=+0.132  smollm2-360m|llama3.2-1b|phi3.5-mini
+eps= 16.5 bilQ=1.585 addQ=1.585 gap=+0.000  smollm2-360m|llama3.2-1b|mistral-7b
+eps= 18.0 bilQ=1.585 addQ=1.470 gap=+0.115  smollm2-360m|llama3.2-1b|mistral-7b
+eps= 19.5 bilQ=1.585 addQ=1.470 gap=+0.115  smollm2-360m|llama3.2-1b|mistral-7b
+eps= 21.0 bilQ=1.585 addQ=1.470 gap=+0.115  smollm2-360m|llama3.2-1b|mistral-7b
+eps= 22.5 bilQ=1.585 addQ=1.470 gap=+0.115  smollm2-360m|llama3.2-1b|mistral-7b
+eps= 24.0 bilQ=1.585 addQ=1.470 gap=+0.115  smollm2-360m|llama3.2-1b|mistral-7b
+eps= 25.5 bilQ=1.585 addQ=1.470 gap=+0.115  smollm2-360m|llama3.2-1b|mistral-7b
+eps= 27.0 bilQ=1.585 addQ=1.470 gap=+0.115  smollm2-360m|llama3.2-1b|mistral-7b
+eps= 28.5 bilQ=1.585 addQ=1.470 gap=+0.115  smollm2-360m|llama3.2-1b|mistral-7b
+
+GATED quality: bilinear >= additive by mean 0.178, max 0.324, over 44 pts
+bilinear strictly better in 42/44

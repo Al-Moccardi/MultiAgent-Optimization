@@ -1,0 +1,12 @@
+# MAMAP-Edge -- verification environment (CPU-only, deterministic).
+# Sufficient to run everything in optimization/ including scripts_verify/.
+# Python >= 3.11. CBC ships with pulp; no external solver needed.
+pandas>=2.0
+numpy>=1.24
+pulp==3.3.2        # MILP modelling; ships the CBC solver. PINNED: together with
+                   # the lexicographic canonicalization (shared/lib/lexsolve.py)
+                   # this makes the reported ALLOCATIONS, not just the objective
+                   # values, machine-independent.
+pyarrow>=12.0      # parquet I/O
+matplotlib>=3.7
+PyYAML>=6.0        # catalog / manifest parsing

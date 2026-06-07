@@ -1,0 +1,13 @@
+sigma | example optima (eps=10/16/22) disp|spec|synth | spec always small?
+ 1.00 | ['phi3.5-m|llama3.2|llama3.2', 'phi3.5-m|llama3.2|phi3.5-m', 'mistral-|llama3.2|mistral-'] | YES
+ 0.66 | ['phi3.5-m|llama3.2|llama3.2', 'mistral-|llama3.2|mistral-', 'mistral-|llama3.2|mistral-'] | YES
+ 0.50 | ['phi3.5-m|llama3.2|gemma2-2', 'mistral-|llama3.2|mistral-', 'mistral-|llama3.2|mistral-'] | NO: ['llama3.2-1b', 'mistral-7b', 'smollm2-360m']
+ 0.33 | ['phi3.5-m|llama3.2|phi3.5-m', 'mistral-|llama3.2|mistral-', 'mistral-|llama3.2|mistral-'] | NO: ['llama3.2-1b', 'mistral-7b']
+
+saved sigma_sweep.csv (99 rows)
+
+=== specialist model chosen across all eps, per sigma ===
+ sigma=1.00: {'llama3.2-1b': 22, 'smollm2-360m': 2}
+ sigma=0.66: {'llama3.2-1b': 24, 'smollm2-360m': 1}
+ sigma=0.50: {'llama3.2-1b': 23, 'smollm2-360m': 1, 'mistral-7b': 1}
+ sigma=0.33: {'llama3.2-1b': 21, 'mistral-7b': 4}

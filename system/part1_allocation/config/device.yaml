@@ -1,0 +1,10 @@
+# One target device. Create one device.yaml per hardware class you generalize
+# across (e.g. unified-memory Mac, CPU-only x86, small discrete GPU laptop).
+# Performance is re-measured per device; quality is reused (hardware-invariant).
+
+name: macbook_m_unified_16gb
+hw_class: UNIFIED            # UNIFIED | DISCRETE_GPU | CPU_ONLY
+memory_budget_gb: 16.0       # M : single memory-class budget
+latency_sla_s: 8.0           # T° : per-agent latency budget per call
+latency_metric: p95          # how to aggregate per-query latency -> per-(a,k): mean | p95
+energy_backend: none         # none | rapl | powermetrics | nvidia_smi | tegrastats

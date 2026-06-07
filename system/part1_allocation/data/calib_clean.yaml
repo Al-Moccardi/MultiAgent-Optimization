@@ -1,0 +1,279 @@
+queries:
+- id: GS001
+  text: What are the conditions for the validity of a holographic will?
+  expected_agents:
+  - A_succ_testamentaria
+  difficulty: simple
+  risk_level: low
+  category: succession_validity
+- id: GS002
+  text: Must a public will always be drafted in the presence of two witnesses?
+  expected_agents:
+  - A_succ_testamentaria
+  difficulty: simple
+  risk_level: low
+  category: succession_validity
+- id: GS003
+  text: Can a holographic will be revoked by destroying it? What precautions should
+    be taken?
+  expected_agents:
+  - A_succ_testamentaria
+  difficulty: medium
+  risk_level: medium
+  category: succession_revocation
+- id: GS004
+  text: What share of the reserved portion is due to the spouse when the deceased
+    leaves two children?
+  expected_agents:
+  - A_succ_testamentaria
+  - A_succ_legittima
+  difficulty: medium
+  risk_level: low
+  category: legittima
+- id: GS005
+  text: 'Case: the deceased disposed by will of the entire estate in favor of a third
+    party, leaving a wife and three minor children. Is the will valid?'
+  expected_agents:
+  - A_succ_testamentaria
+  - A_succ_legittima
+  - A_tutela_minori
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: legittima_lesa
+- id: GS006
+  text: Difference between a specific legacy and a generic legacy under Italian law
+  expected_agents:
+  - A_succ_testamentaria
+  difficulty: simple
+  risk_level: low
+  category: legato
+- id: GS007
+  text: Can I disinherit a child in a will? In what cases is disinheritance permitted
+    under Italian law?
+  expected_agents:
+  - A_succ_testamentaria
+  - A_succ_legittima
+  difficulty: medium
+  risk_level: medium
+  category: diseredazione
+- id: GS008
+  text: 'The secret will: form, sealing requirements, and reception by the notary'
+  expected_agents:
+  - A_succ_testamentaria
+  difficulty: simple
+  risk_level: low
+  category: succession_validity
+- id: GS009
+  text: In the absence of a will, who are the legal heirs and in what shares under
+    Italian succession law?
+  expected_agents:
+  - A_succ_legittima
+  difficulty: simple
+  risk_level: low
+  category: successione_legittima
+- id: GS010
+  text: 'Succession of a person without children, without a spouse, with two living
+    siblings: how are the assets divided?'
+  expected_agents:
+  - A_succ_legittima
+  difficulty: medium
+  risk_level: low
+  category: successione_legittima
+- id: GS011
+  text: What happens if an heir predeceases the deceased? Explain the doctrine of
+    representation.
+  expected_agents:
+  - A_succ_legittima
+  difficulty: medium
+  risk_level: low
+  category: rappresentazione
+- id: GS012
+  text: How is an inheritance accepted with benefit of inventory? Terms and procedures
+  expected_agents:
+  - A_succ_legittima
+  - A_volontaria_giurisdizione
+  difficulty: medium
+  risk_level: medium
+  category: accettazione
+- id: GS013
+  text: 'Renunciation of inheritance: required form, effects, and term for challenging
+    it'
+  expected_agents:
+  - A_succ_legittima
+  - A_volontaria_giurisdizione
+  difficulty: medium
+  risk_level: medium
+  category: rinuncia
+- id: GS014
+  text: My father died under the legal community-of-property regime with my mother,
+    leaving me and my brother as the only heirs. How is the hereditary mass calculated?
+  expected_agents:
+  - A_succ_legittima
+  - A_patrimoniale_comunione
+  difficulty: complex
+  risk_level: medium
+  category: successione_comunione
+- id: GS015
+  text: 'Collation in Italian succession law: what does it consist of and which donations
+    fall within it?'
+  expected_agents:
+  - A_succ_legittima
+  difficulty: medium
+  risk_level: medium
+  category: collazione
+- id: NEW_STRESS_001
+  text: 'A separated couple under the community-of-property regime: the husband dies
+    intestate before the separation is finalized, leaving two minor children. The
+    surviving wife requests dissolution of the community and the appointment of a
+    guardian for the inheritance share of the minors. How is the hereditary mass calculated,
+    what protections apply to the minors, and what is the status of the pending separation
+    proceeding?'
+  expected_agents:
+  - A_succ_legittima
+  - A_patrimoniale_comunione
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  - A_separazione_contenziosa
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: succession_separation_minors
+- id: NEW_STRESS_002
+  text: The testator dies leaving a will that institutes a foundation as universal
+    heir, while the surviving spouse and two adult children claim violation of the
+    reserved share. Mediation between the heirs and the foundation is attempted before
+    bringing the action. How is the reserved portion computed, what remedies are available,
+    and what is the role of family mediation in this dispute?
+  expected_agents:
+  - A_succ_testamentaria
+  - A_succ_legittima
+  - A_negoziazione_assistita_e_mediazione_familiare
+  difficulty: complex
+  risk_level: high
+  category: legittima_lesa_mediation
+- id: NEW_STRESS_003
+  text: A widowed father with two minor children dies leaving an estate that includes
+    real estate co-owned with his late wife under a community-of-property regime that
+    was never dissolved. A tutor must be appointed for the children, and authorization
+    from the guardianship judge is required to accept the inheritance with benefit
+    of inventory. What is the procedural sequence?
+  expected_agents:
+  - A_succ_legittima
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  - A_patrimoniale_comunione
+  difficulty: complex
+  risk_level: high
+  category: succession_minors_property
+- id: NEW_STRESS_004
+  text: Two spouses, married under the separation-of-property regime, are in contested
+    separation proceedings. During the proceedings the husband dies leaving a holographic
+    will that names a third party as universal heir. The wife claims her reserved
+    share and contests the will. What is the impact of the unresolved separation on
+    succession rights, and how does the matrimonial property regime affect the hereditary
+    mass?
+  expected_agents:
+  - A_separazione_contenziosa
+  - A_succ_testamentaria
+  - A_succ_legittima
+  - A_patrimoniale_separazione
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: separation_pending_succession
+- id: NEW_STRESS_005
+  text: A consensually-separated couple with one minor child reaches an agreement
+    via assisted negotiation that includes mutual succession provisions. The wife
+    later dies intestate, leaving the minor child as sole heir. The ex-husband, as
+    tutor, must request court authorization to renounce part of the inheritance burdened
+    with debts. Outline the steps.
+  expected_agents:
+  - A_separazione_consensuale
+  - A_negoziazione_assistita_e_mediazione_familiare
+  - A_succ_legittima
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  difficulty: complex
+  risk_level: high
+  category: consensual_separation_succession_minor
+- id: NEW_STRESS_006
+  text: A married couple under the community-of-property regime jointly own a family
+    business. They decide to convert to the separation-of-property regime via a notarial
+    deed during the marriage. Two years later one spouse dies leaving a will dividing
+    the business shares unequally between the surviving spouse and the children. How
+    is the conversion treated in the succession, and what claims may the legittimari
+    raise?
+  expected_agents:
+  - A_patrimoniale_comunione
+  - A_patrimoniale_separazione
+  - A_succ_testamentaria
+  - A_succ_legittima
+  difficulty: complex
+  risk_level: medium
+  category: regime_conversion_succession
+- id: NEW_STRESS_007
+  text: Following an attempted contested separation that fails in court, the spouses
+    proceed with family mediation and reach a consensual settlement that includes
+    the assignment of the marital home to the wife and custody of two minor children
+    to her. One year later the wife dies, and the children inherit her share of the
+    marital home. The ex-husband requests appointment as tutor and authorization to
+    manage the inherited real estate.
+  expected_agents:
+  - A_separazione_contenziosa
+  - A_negoziazione_assistita_e_mediazione_familiare
+  - A_separazione_consensuale
+  - A_succ_legittima
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: separation_succession_minors_tutela
+- id: NEW_STRESS_008
+  text: A testator leaves a will dividing the estate among three heirs, two of whom
+    are minors under guardianship. One minor tutor seeks court authorization to accept
+    the inheritance with benefit of inventory; the other minor tutor seeks to renounce
+    due to encumbered assets. The third heir, an adult, opens collation proceedings.
+    What procedural framework governs these divergent positions?
+  expected_agents:
+  - A_succ_testamentaria
+  - A_succ_legittima
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  difficulty: complex
+  risk_level: medium
+  category: testate_succession_minors_divergent
+- id: NEW_STRESS_009
+  text: A couple in consensual separation with one minor child negotiate, through
+    assisted negotiation, an agreement that includes mutual reciprocal wills naming
+    each other as beneficiaries with substitution in favor of the minor. The separation
+    is ratified, but one spouse dies before the will is updated. The surviving spouse
+    and the minor (through tutor) both claim. What is the validity of the reciprocal
+    will after separation, and what is the minor reserved share?
+  expected_agents:
+  - A_separazione_consensuale
+  - A_negoziazione_assistita_e_mediazione_familiare
+  - A_succ_testamentaria
+  - A_succ_legittima
+  - A_tutela_minori
+  difficulty: complex
+  risk_level: high
+  category: reciprocal_wills_separation_minor
+- id: NEW_STRESS_010
+  text: 'A widowed mother dies intestate under the community-of-property regime (never
+    dissolved with her late husband), leaving three children: one adult and two minors
+    under separate tutors. The hereditary mass includes assets that were partly community
+    property with the deceased husband. Authorization from the guardianship judge
+    is required for each minor acceptance; assisted negotiation is proposed to resolve
+    disputes between the tutors over the division.'
+  expected_agents:
+  - A_succ_legittima
+  - A_patrimoniale_comunione
+  - A_tutela_minori
+  - A_volontaria_giurisdizione
+  - A_negoziazione_assistita_e_mediazione_familiare
+  difficulty: complex
+  risk_level: high
+  high_risk: true
+  category: intestate_minors_community_negotiation

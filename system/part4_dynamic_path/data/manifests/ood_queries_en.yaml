@@ -1,0 +1,125 @@
+queries:
+- id: OOD_ITA_LABOR_01
+  query: Under the Italian Statuto dei Lavoratori, what are the procedural requirements
+    for an employer to challenge a worker's reinstatement order issued by a labour
+    tribunal?
+  difficulty: medium
+  risk_level: low
+  category: other_italian_legal_labor
+  expected_agents: []
+- id: OOD_ITA_TAX_01
+  query: What is the statute of limitations for the Agenzia delle Entrate to assess
+    undeclared VAT liabilities arising from a 2018 invoice, and how is the timeline
+    affected by a request for self-disclosure (ravvedimento operoso) filed in 2024?
+  difficulty: complex
+  risk_level: medium
+  category: other_italian_legal_tax
+  expected_agents: []
+- id: OOD_ITA_CRIMINAL_01
+  query: In Italian criminal procedure, what are the conditions under which a confession
+    obtained during a custodial interview can be excluded under Article 191 of the
+    Codice di Procedura Penale, and how does this differ from inadmissibility under
+    Article 188?
+  difficulty: complex
+  risk_level: high
+  category: other_italian_legal_criminal
+  expected_agents: []
+- id: OOD_ITA_ADMIN_01
+  query: What is the deadline to file a ricorso al TAR against a permit-to-build refusal
+    issued by a municipal SUAP, and which procedural cure applies if the notification
+    was sent only by certified email (PEC) without an attached attestation of administrative
+    origin?
+  difficulty: complex
+  risk_level: medium
+  category: other_italian_legal_administrative
+  expected_agents: []
+- id: OOD_JUR_BR_SUCCESSION_01
+  query: Under Brazilian succession law (Código Civil de 2002, Art. 1845), what is
+    the maximum disposable portion (porção disponível) a testator with surviving spouse
+    and two adult children may freely leave to a non-relative, and how is this calculated
+    after the conjugal half is set aside under the partial-community regime?
+  difficulty: complex
+  risk_level: low
+  category: other_jurisdiction_succession
+  expected_agents: []
+- id: OOD_JUR_DE_FAMILY_01
+  query: Under German family law (BGB §1626 ff.), can a parent who shares joint custody
+    (gemeinsame elterliche Sorge) unilaterally change a minor child's habitual residence
+    to another German Land without the other parent's consent, and what is the procedural
+    remedy in family court?
+  difficulty: complex
+  risk_level: medium
+  category: other_jurisdiction_family
+  expected_agents: []
+- id: OOD_JUR_FR_CIVIL_01
+  query: In French civil procedure, what is the difference between an opposition and
+    a tierce opposition against a default judgment (jugement par défaut) under the
+    Code de Procédure Civile, and what are the respective time limits?
+  difficulty: medium
+  risk_level: low
+  category: other_jurisdiction_procedure
+  expected_agents: []
+- id: OOD_JUR_ES_PROPERTY_01
+  query: Under Spanish property law (Código Civil, Art. 392 ff.), how does the actio
+    communi dividundo procedure differ when invoked against a co-owner who has been
+    excluded from possession of the common property versus one who has merely refused
+    to contribute to maintenance costs?
+  difficulty: complex
+  risk_level: low
+  category: other_jurisdiction_property
+  expected_agents: []
+- id: OOD_NONLEGAL_COOKING_01
+  query: What is the ideal oven temperature and total baking time for a Neapolitan-style
+    pizza dough hydrated at 65% with 0.3% fresh yeast, proofed for 24 hours at 4°C?
+  difficulty: simple
+  risk_level: low
+  category: non_legal_cooking
+  expected_agents: []
+- id: OOD_NONLEGAL_TECH_01
+  query: When using PostgreSQL 16 with logical replication, how do I configure replica
+    identity for a publication that includes a partitioned table whose partitions
+    have heterogeneous column orderings?
+  difficulty: complex
+  risk_level: low
+  category: non_legal_technology
+  expected_agents: []
+- id: OOD_NONLEGAL_HISTORY_01
+  query: What were the principal economic and military causes that led to the dissolution
+    of the Hanseatic League in the mid-17th century, and how did the Peace of Westphalia
+    accelerate that decline?
+  difficulty: medium
+  risk_level: low
+  category: non_legal_history
+  expected_agents: []
+- id: OOD_NONLEGAL_MEDICAL_01
+  query: What are the current first-line pharmacological treatments for newly diagnosed
+    Stage II hypertension in a 58-year-old patient with type 2 diabetes and stage
+    3a chronic kidney disease, and how should the combination be titrated?
+  difficulty: complex
+  risk_level: high
+  category: non_legal_medical
+  expected_agents: []
+- id: OOD_MALFORMED_SINGLEWORD_01
+  query: successione
+  difficulty: simple
+  risk_level: low
+  category: malformed_singleword
+  expected_agents: []
+- id: OOD_MALFORMED_WRONGLANG_01
+  query: 私の祖父が遺言を残さずに亡くなりました。彼の財産は誰が相続しますか?日本の民法に基づいて教えてください。
+  difficulty: simple
+  risk_level: low
+  category: malformed_wrong_language
+  expected_agents: []
+- id: OOD_MALFORMED_NOISE_01
+  query: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+    deserunt mollit anim id est laborum. The quick brown fox jumps over the lazy dog.
+    Now please give me a complete summary of the testamentary capacity rules.
+  difficulty: complex
+  risk_level: medium
+  category: malformed_noise_with_late_legal_question
+  expected_agents: []

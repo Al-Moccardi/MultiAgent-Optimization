@@ -1,0 +1,1962 @@
+{
+  "embedder": "bge-m3 (cached)",
+  "calib_file": "part4_dynamic_path\\data\\manifests\\calibration_queries_en.yaml",
+  "n_test": 64,
+  "gate_method": "f3",
+  "per_domain_tau": {
+    "A_negoziazione_assistita_e_mediazione_familiare": 0.13242630385487528,
+    "A_patrimoniale_comunione": 0.15564625850340136,
+    "A_patrimoniale_separazione": 0.16581632653061223,
+    "A_separazione_consensuale": 0.1446473326172574,
+    "A_separazione_contenziosa": 0.08163265306122448,
+    "A_succ_legittima": 0.16238753565942504,
+    "A_succ_testamentaria": 0.15698587127158556,
+    "A_tutela_minori": 0.08163265306122448,
+    "A_volontaria_giurisdizione": 0.0816326530612245
+  },
+  "presets": {
+    "qa_optimum": {
+      "allocation": {
+        "dispatcher": "mistral-7b",
+        "specialist": "llama3.2-1b",
+        "synthesiser": "mistral-7b"
+      },
+      "L_disp": 0.4,
+      "L_spec_one": 2.3,
+      "L_synth": 9.48,
+      "normal": {
+        "precision": 0.237,
+        "recall": 0.932,
+        "f1": 0.332,
+        "mean_k": 6.0,
+        "mean_latency_s": 23.65,
+        "latency_vs_normal_pct": 0.0,
+        "abstain_accuracy": 0.0
+      },
+      "dynamic": {
+        "precision": 0.433,
+        "recall": 0.864,
+        "f1": 0.503,
+        "mean_k": 3.61,
+        "mean_latency_s": 17.28,
+        "latency_vs_normal_pct": 27.0,
+        "abstain_accuracy": 0.4
+      },
+      "delta_f1": 0.171,
+      "delta_latency_s": -6.37,
+      "_per_query": "see gated_optimum"
+    },
+    "gated_optimum": {
+      "allocation": {
+        "dispatcher": "smollm2-360m",
+        "specialist": "llama3.2-1b",
+        "synthesiser": "mistral-7b"
+      },
+      "L_disp": 0.09,
+      "L_spec_one": 2.3,
+      "L_synth": 9.48,
+      "normal": {
+        "precision": 0.237,
+        "recall": 0.932,
+        "f1": 0.332,
+        "mean_k": 6.0,
+        "mean_latency_s": 23.35,
+        "latency_vs_normal_pct": 0.0,
+        "abstain_accuracy": 0.0
+      },
+      "dynamic": {
+        "precision": 0.433,
+        "recall": 0.864,
+        "f1": 0.503,
+        "mean_k": 3.61,
+        "mean_latency_s": 16.97,
+        "latency_vs_normal_pct": 27.3,
+        "abstain_accuracy": 0.4
+      },
+      "delta_f1": 0.171,
+      "delta_latency_s": -6.38,
+      "_per_query": [
+        {
+          "id": "GAP_C002",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [],
+            "k": 0,
+            "lat_perftable_s": 0.094
+          }
+        },
+        {
+          "id": "GAP_C015",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GAP_C005",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [],
+            "k": 0,
+            "lat_perftable_s": 0.094
+          }
+        },
+        {
+          "id": "GAP_C004",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [],
+            "k": 0,
+            "lat_perftable_s": 0.094
+          }
+        },
+        {
+          "id": "GAP_C012",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 2,
+            "lat_perftable_s": 14.164
+          }
+        },
+        {
+          "id": "GAP_C013",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 5,
+            "lat_perftable_s": 21.051
+          }
+        },
+        {
+          "id": "ST008",
+          "gold": [
+            "A_negoziazione_assistita_e_mediazione_familiare",
+            "A_patrimoniale_comunione",
+            "A_separazione_contenziosa",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "ST009",
+          "gold": [
+            "A_patrimoniale_separazione",
+            "A_separazione_consensuale",
+            "A_succ_legittima",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS050",
+          "gold": [
+            "A_tutela_minori",
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_contenziosa"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "ST013",
+          "gold": [
+            "A_negoziazione_assistita_e_mediazione_familiare",
+            "A_separazione_contenziosa",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_tutela_minori"
+            ],
+            "k": 4,
+            "lat_perftable_s": 18.755
+          }
+        },
+        {
+          "id": "GS025",
+          "gold": [
+            "A_separazione_contenziosa",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_contenziosa"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "ST007",
+          "gold": [
+            "A_separazione_consensuale",
+            "A_succ_legittima",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS044",
+          "gold": [
+            "A_separazione_contenziosa",
+            "A_tutela_minori",
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_tutela_minori"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "ST002",
+          "gold": [
+            "A_patrimoniale_comunione",
+            "A_succ_legittima",
+            "A_tutela_minori",
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "ST014",
+          "gold": [
+            "A_patrimoniale_comunione",
+            "A_separazione_consensuale",
+            "A_succ_legittima",
+            "A_succ_testamentaria",
+            "A_tutela_minori",
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "ST012",
+          "gold": [
+            "A_patrimoniale_comunione",
+            "A_separazione_contenziosa",
+            "A_tutela_minori",
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "ST010",
+          "gold": [
+            "A_negoziazione_assistita_e_mediazione_familiare",
+            "A_patrimoniale_comunione",
+            "A_separazione_contenziosa",
+            "A_tutela_minori",
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GAP_B004",
+          "gold": [
+            "A_succ_legittima",
+            "A_succ_testamentaria"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 3,
+            "lat_perftable_s": 16.46
+          }
+        },
+        {
+          "id": "GAP_B001",
+          "gold": [
+            "A_negoziazione_assistita_e_mediazione_familiare",
+            "A_patrimoniale_comunione",
+            "A_succ_legittima"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 5,
+            "lat_perftable_s": 21.051
+          }
+        },
+        {
+          "id": "GAP_B006",
+          "gold": [
+            "A_patrimoniale_comunione",
+            "A_patrimoniale_separazione",
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GAP_B009",
+          "gold": [
+            "A_succ_legittima",
+            "A_succ_testamentaria"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "ST020",
+          "gold": [
+            "A_patrimoniale_comunione",
+            "A_separazione_contenziosa",
+            "A_succ_testamentaria",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS058",
+          "gold": [
+            "A_patrimoniale_comunione",
+            "A_succ_legittima"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "ST011",
+          "gold": [
+            "A_negoziazione_assistita_e_mediazione_familiare",
+            "A_patrimoniale_comunione",
+            "A_separazione_consensuale",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS014",
+          "gold": [
+            "A_patrimoniale_comunione",
+            "A_succ_legittima"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 5,
+            "lat_perftable_s": 21.051
+          }
+        },
+        {
+          "id": "GS067",
+          "gold": [
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_tutela_minori"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "GS045",
+          "gold": [
+            "A_tutela_minori",
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS041",
+          "gold": [
+            "A_negoziazione_assistita_e_mediazione_familiare",
+            "A_succ_legittima"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS043",
+          "gold": [
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_contenziosa",
+              "A_tutela_minori"
+            ],
+            "k": 2,
+            "lat_perftable_s": 14.164
+          }
+        },
+        {
+          "id": "GS018",
+          "gold": [
+            "A_separazione_consensuale"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 3,
+            "lat_perftable_s": 16.46
+          }
+        },
+        {
+          "id": "GS021",
+          "gold": [
+            "A_negoziazione_assistita_e_mediazione_familiare",
+            "A_separazione_consensuale"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 4,
+            "lat_perftable_s": 18.755
+          }
+        },
+        {
+          "id": "GS062",
+          "gold": [
+            "A_patrimoniale_separazione",
+            "A_succ_legittima"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS010",
+          "gold": [
+            "A_succ_legittima"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS020",
+          "gold": [
+            "A_separazione_consensuale"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS015",
+          "gold": [
+            "A_succ_legittima"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 4,
+            "lat_perftable_s": 18.755
+          }
+        },
+        {
+          "id": "GS054",
+          "gold": [
+            "A_patrimoniale_comunione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_tutela_minori"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "GS039",
+          "gold": [
+            "A_negoziazione_assistita_e_mediazione_familiare"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS055",
+          "gold": [
+            "A_patrimoniale_comunione",
+            "A_separazione_consensuale"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 5,
+            "lat_perftable_s": 21.051
+          }
+        },
+        {
+          "id": "GS013",
+          "gold": [
+            "A_succ_legittima",
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS042",
+          "gold": [
+            "A_separazione_consensuale",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GAP_A004",
+          "gold": [
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_succ_testamentaria"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "GAP_A003",
+          "gold": [
+            "A_succ_legittima",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "GS006",
+          "gold": [
+            "A_succ_testamentaria"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 2,
+            "lat_perftable_s": 14.164
+          }
+        },
+        {
+          "id": "GS036",
+          "gold": [
+            "A_negoziazione_assistita_e_mediazione_familiare"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 5,
+            "lat_perftable_s": 21.051
+          }
+        },
+        {
+          "id": "GS001",
+          "gold": [
+            "A_succ_testamentaria"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_contenziosa",
+              "A_succ_testamentaria"
+            ],
+            "k": 2,
+            "lat_perftable_s": 14.164
+          }
+        },
+        {
+          "id": "GS027",
+          "gold": [
+            "A_separazione_contenziosa"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_contenziosa",
+              "A_tutela_minori"
+            ],
+            "k": 2,
+            "lat_perftable_s": 14.164
+          }
+        },
+        {
+          "id": "GS065",
+          "gold": [
+            "A_volontaria_giurisdizione"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_contenziosa"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "GAP_A005",
+          "gold": [
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_contenziosa",
+              "A_tutela_minori"
+            ],
+            "k": 2,
+            "lat_perftable_s": 14.164
+          }
+        },
+        {
+          "id": "GAP_A006",
+          "gold": [
+            "A_succ_legittima"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "NEW_TEST_001",
+          "gold": [
+            "A_succ_legittima"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_succ_legittima"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "NEW_TEST_002",
+          "gold": [
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_tutela_minori"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "NEW_TEST_003",
+          "gold": [
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_contenziosa",
+              "A_tutela_minori"
+            ],
+            "k": 2,
+            "lat_perftable_s": 14.164
+          }
+        },
+        {
+          "id": "NEW_TEST_004",
+          "gold": [
+            "A_succ_testamentaria"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_succ_testamentaria"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "NEW_TEST_005",
+          "gold": [
+            "A_separazione_consensuale",
+            "A_tutela_minori"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "NEW_TEST_006",
+          "gold": [
+            "A_patrimoniale_comunione",
+            "A_succ_legittima",
+            "A_succ_testamentaria"
+          ],
+          "is_abstain": false,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "NEW_TEST_007",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 4,
+            "lat_perftable_s": 18.755
+          }
+        },
+        {
+          "id": "NEW_TEST_008",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_separazione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          }
+        },
+        {
+          "id": "NEW_TEST_009",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_tutela_minori"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "NEW_TEST_010",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_patrimoniale_comunione",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_tutela_minori"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "NEW_TEST_011",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_succ_testamentaria"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "NEW_TEST_012",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_separazione_contenziosa",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [],
+            "k": 0,
+            "lat_perftable_s": 0.094
+          }
+        },
+        {
+          "id": "NEW_TEST_013",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [],
+            "k": 0,
+            "lat_perftable_s": 0.094
+          }
+        },
+        {
+          "id": "NEW_TEST_014",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_patrimoniale_comunione",
+              "A_patrimoniale_separazione",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [
+              "A_tutela_minori"
+            ],
+            "k": 1,
+            "lat_perftable_s": 11.869
+          }
+        },
+        {
+          "id": "NEW_TEST_015",
+          "gold": [],
+          "is_abstain": true,
+          "normal": {
+            "S": [
+              "A_negoziazione_assistita_e_mediazione_familiare",
+              "A_separazione_consensuale",
+              "A_succ_legittima",
+              "A_succ_testamentaria",
+              "A_tutela_minori",
+              "A_volontaria_giurisdizione"
+            ],
+            "k": 6,
+            "lat_perftable_s": 23.346
+          },
+          "dynamic": {
+            "S": [],
+            "k": 0,
+            "lat_perftable_s": 0.094
+          }
+        }
+      ]
+    },
+    "qwen": {
+      "allocation": {
+        "dispatcher": "qwen2.5-3b",
+        "specialist": "qwen2.5-3b",
+        "synthesiser": "qwen2.5-3b"
+      },
+      "L_disp": 0.23,
+      "L_spec_one": 5.22,
+      "L_synth": 5.22,
+      "normal": {
+        "precision": 0.237,
+        "recall": 0.932,
+        "f1": 0.332,
+        "mean_k": 6.0,
+        "mean_latency_s": 36.75,
+        "latency_vs_normal_pct": 0.0,
+        "abstain_accuracy": 0.0
+      },
+      "dynamic": {
+        "precision": 0.433,
+        "recall": 0.864,
+        "f1": 0.503,
+        "mean_k": 3.61,
+        "mean_latency_s": 23.79,
+        "latency_vs_normal_pct": 35.3,
+        "abstain_accuracy": 0.4
+      },
+      "delta_f1": 0.171,
+      "delta_latency_s": -12.96,
+      "_per_query": "see gated_optimum"
+    }
+  }
+}

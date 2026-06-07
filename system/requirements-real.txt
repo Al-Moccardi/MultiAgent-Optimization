@@ -1,0 +1,7 @@
+# Heavy / optional deps for real on-device runs (--mode real).
+# llama-cpp-python MUST be built for your hardware (see README).
+llama-cpp-python>=0.2.70
+ragas>=0.1.0
+datasets>=2.14
+sentence-transformers>=2.2   # embeddings for RAGAS answer_relevancy
+psutil>=5.9                  # optional RSS-based peak-memory fallback
