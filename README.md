@@ -1,6 +1,6 @@
-# MAMAP-Edge — reviewer repository
+# Quality Aware Multi Agent Placement System
 
-**Memory-Aware Multi-Agent Placement for on-device RAG.** An 11-agent Italian
+**Quality-Aware Multi-Agent Placement for on-device RAG.** An 11-agent Italian
 family-law RAG pipeline — one routing dispatcher, nine legal-domain
 specialists (succession, separation, ADR, minor protection, matrimonial
 property, …) and one synthesiser — must run on a single consumer GPU
